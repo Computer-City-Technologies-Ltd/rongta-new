@@ -10,11 +10,11 @@ const { data, pending, error } = await useFetch(
   {
     default: () => [],
     method: "GET",
-    server: false,
   },
 );
 
-const products = computed(() => data.value?.data || []);
+const products = computed(() => data.value?.products?.data || []);
+// console.log(products.value);
 
 useHead(() => ({
   title: `Products`,
