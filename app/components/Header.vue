@@ -22,7 +22,7 @@ const search = (event) => {
     <div class="grid grid-cols-12 h-24 px-8 relative">
       <div class="col-span-4 flex items-center justify-start">
         <NuxtLink to="/">
-          <img src="/logo.png" class="w-20" />
+          <NuxtImg src="/logo.png" class="w-20" />
         </NuxtLink>
       </div>
 
@@ -69,7 +69,7 @@ const search = (event) => {
 
           <li class="inline-block px-3" @click="toggleSearch">
             <NuxtLink to>
-              <img src="/search.svg" class="w-4" />
+              <NuxtImg src="/search.svg" class="w-4" />
             </NuxtLink>
           </li>
         </ul>
@@ -97,7 +97,7 @@ const search = (event) => {
               />
               <span>
                 <button type="submit" class="bg-rongta p-1 rounded">
-                  <img src="/search.svg" class="h-4" />
+                  <NuxtImg src="/search.svg" class="h-4" />
                 </button>
               </span>
             </form>
@@ -105,7 +105,7 @@ const search = (event) => {
 
           <div class="col-span-1">
             <button class="bg-rongta p-1 rounded" @click="toggleSearch">
-              <img src="/close.svg" class="h-4" />
+              <NuxtImg src="/close.svg" class="h-4" />
             </button>
           </div>
         </div>

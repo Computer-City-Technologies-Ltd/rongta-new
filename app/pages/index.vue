@@ -17,7 +17,7 @@ useHead({
 
 <template>
   <Slider />
-  <Category />
-  <Hproduct />
-  <About />
+  <LazyCategory hydrate-on-visible />
+  <LazyHproduct hydrate-on-visible />
+  <LazyAbout hydrate-on-visible />
 </template>

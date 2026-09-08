@@ -14,12 +14,11 @@ const { data, pending, error } = await useFetch(
   {
     default: () => [],
     method: "GET",
-    server: false,
   },
 );
 
 // Reactive products
-const products = computed(() => data.value?.data || []);
+const products = computed(() => data.value?.products?.data || []);
 </script>
 
 <template>
@@ -29,7 +28,7 @@ const products = computed(() => data.value?.data || []);
         Thermal Printer
       </h2>
 
-      <img src="/bt-i.png" class="mt-4" />
+      <NuxtImg src="/bt-i.png" class="mt-4" />
     </div>
 
     <div
@@ -42,14 +41,13 @@ const products = computed(() => data.value?.data || []);
         :key="product?.slug"
       >
         <NuxtLink :to="`/product/${product.slug}`">
-          <img :src="product.photo" :alt="product.name" />
+          <NuxtImg :src="product.photo" :alt="product.name" />
           <p class="text-rongtatext text-sm font-semibold px-8 py-2">
             {{ product?.name }}
           </p>
         </NuxtLink>
       </div>
     </div>
-
     <div v-else class="text-center py-12 text-gray-500">No products found.</div>
   </div>
 </template>

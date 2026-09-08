@@ -137,7 +137,7 @@
 
         <div class="col-span-1 flex justify-end">
           <a href="https://www.facebook.com/comcity.bd">
-            <img src="/facebook.png" class="w-8" />
+            <NuxtImg src="/facebook.png" class="w-8" />
           </a>
         </div>
       </div>

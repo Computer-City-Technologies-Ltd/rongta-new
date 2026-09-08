@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      style="background-image: url('/about-bg.jpg')"
+      style="background-image: url(&quot;/about-bg.webp&quot;)"
       class="lg:h-[600px] h-[400px] bg-cover bg-no-repeat bg-center bg-fixed grid lg:grid-flow-col lg:grid-cols-2 grid-cols-1"
     >
       <div

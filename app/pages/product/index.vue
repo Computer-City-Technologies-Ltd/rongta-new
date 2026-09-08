@@ -1,5 +1,4 @@
 <script setup>
-const category = ref("thermal-printer");
 const cat_id = ref([57, 9, 56]);
 
 const queryString = new URLSearchParams();
