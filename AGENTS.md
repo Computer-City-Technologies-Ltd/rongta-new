@@ -5,10 +5,10 @@ Nuxt 4 marketing site for Rongta Bangladesh (POS/thermal printers). Minimal foot
 ## Commands
 
 ```bash
-npm install    # install deps (runs `nuxt prepare` via postinstall)
-npm run dev    # dev server at localhost:3000
-npm run build  # production build
-npm run preview # preview production build
+bun install    # install deps (runs `nuxt prepare` via postinstall)
+bun run dev    # dev server at localhost:3000
+bun run build  # production build
+bun run preview # preview production build
 ```
 
 No lint, typecheck, or test scripts exist. No `.env` files required for local dev.
@@ -53,7 +53,8 @@ Footer newsletter uses `https://submit-form.com/eNqzBhtY`.
 
 ### Gotchas
 
-- `Footer.vue` uses **Options API** while all other components use `<script setup>` — keep existing style when editing, don't force-mix.
+- `Footer.vue` uses **Options API** (`<script>`) while all other components use `<script setup>` — keep existing style when editing, don't force-mix.
 - Some components explicitly import `useFetch` from `#app` or `useRoute` from `vue-router` — Nuxt auto-imports these, but existing code does it explicitly. Follow the file's existing convention.
+- Tailwind CSS: `nuxt.config.ts` sets `tailwindcss: { cssPath: false }` and imports `~/assets/css/tailwind.css` manually. Changing either without updating the other breaks styles.
 - `product/[slug].vue` "Buy Now" link points to the API URL directly, not a checkout page.
 - No `public/sw.js` functionality appears wired up — service worker files exist but aren't registered in app config.

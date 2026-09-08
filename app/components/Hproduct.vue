@@ -10,6 +10,7 @@ const { data, pending, error } = await useFetch(
   {
     default: () => [],
     method: "GET",
+    server: false,
   },
 );
 
