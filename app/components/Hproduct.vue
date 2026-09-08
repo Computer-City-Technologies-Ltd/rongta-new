@@ -14,7 +14,7 @@ const { data, pending, error } = await useFetch(
 );
 
 // Reactive products
-const products = data.value?.products?.data;
+const products = computed(() => data.value?.products?.data || []);
 </script>
 
 <template>
