@@ -3,14 +3,7 @@ const ssrStreamingEnabled = process.env.NODE_ENV !== "development";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: false },
-  experimental: {
-    ssrStreaming: ssrStreamingEnabled,
-  },
-  runtimeConfig: {
-    public: {
-      ssrStreamingEnabled,
-    },
-  },
+
   image: {
     quality: 80,
   },
