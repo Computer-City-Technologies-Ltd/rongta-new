@@ -41,7 +41,7 @@ const products = computed(() => data.value?.products?.data || []);
         :key="product?.slug"
       >
         <NuxtLink :to="`/product/${product.slug}`">
-          <NuxtImg :src="product.photo" :alt="product.name" />
+          <img :src="product.photo" :alt="product.name" />
           <p class="text-rongtatext text-sm font-semibold px-8 py-2">
             {{ product?.name }}
           </p>
