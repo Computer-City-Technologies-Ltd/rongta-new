@@ -2,7 +2,6 @@
 import { ref, computed } from "vue";
 
 // Variables
-const category = ref("thermal-printer");
 const cat_id = ref([57, 9, 56]);
 
 // Convert params to query string manually
