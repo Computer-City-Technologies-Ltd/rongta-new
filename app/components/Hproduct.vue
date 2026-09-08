@@ -1,10 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 
-// Variables
 const cat_id = ref([57, 9, 56]);
-
-// Convert params to query string manually
 const queryString = new URLSearchParams();
 cat_id.value.forEach((id) => queryString.append("id", id));
 
@@ -17,7 +14,7 @@ const { data, pending, error } = await useFetch(
 );
 
 // Reactive products
-const products = computed(() => data.value?.products?.data || []);
+const products = data.value?.products?.data;
 </script>
 
 <template>
